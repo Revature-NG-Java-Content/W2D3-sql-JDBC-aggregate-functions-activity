@@ -1,1 +1,1 @@
-# W2D3-sql-JDBC-aggregate-functions-avtivity
+# W2D3-sql-JDBC-aggregate-functions-activity

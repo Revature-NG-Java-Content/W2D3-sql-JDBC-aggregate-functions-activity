@@ -13,7 +13,7 @@
 #### MIN - Returns the lowest value (minimum) in a set of non-NULL values
 #### MAX - Returns the highest value (maximum) in a set of non-NULL values
 
-
+#####
 
 ## COUNT() 
 
@@ -162,13 +162,13 @@ Please keep in mind that we created the ProduceDAO interface that our Produce Re
 ```
 
 Notes from the above code snippet :
-	sql string = The String "sql" represents the SQL statement that we want to execute /n
+	sql string = The String "sql" represents the SQL statement that we want to execute \n
 	rs.next() = remember, in order for us to see what is in the result set we get back from the database, must use rs.next() which allows to go from 
-		pointing to the result set to being inside the result set. /n 
+		pointing to the result set to being inside the result set. \n 
 	return = Note rs.getInt() indicates we are expecting an int back from the db. Inside of the parenthesis we add the column name or number where our 
 		answer will be. Since our aggregate functions return a single result, the column name insode those parenthesis should match the
 		aggregate function you are executing - as we see above.  The second return is there if we dont get a result becak , but we didnt have ann 
-		error either. Returning 0 just satifies the function's signature. /n
+		error either. Returning 0 just satifies the function's signature. \n
 
 
 Now let's see what we get...

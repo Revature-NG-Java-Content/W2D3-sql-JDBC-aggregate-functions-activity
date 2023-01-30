@@ -78,8 +78,8 @@ Task 1: Use the COUNT(*) function to get the number of differnt produce in the t
 Copy and paste the following line into dbeaver and run it :
 
 ```
-SELECT COUNT(*) 
-FROM produce
+SELECT COUNT(*) as total_count
+FROM produce;
 
 ```
 
@@ -87,8 +87,9 @@ What answer is printed into the console?
 
 You should see 22 printed in the console.
 
+Note: "total_count" is the alias for our aggregate's column name. We will see this again in a bit !
 
-		** // here i will add in a screenshot of the solution they should see ()
+
 
 
 Awesome! Pretty straight forward right ? Great!  Now let's take it up a notch !
@@ -103,8 +104,21 @@ How exciting !! So lets do just that !
 - Next we will set up our project to communicate with our DB
 
 
-	
-	- In our 'java' folder , right click to Create a new Java class. Call it 'Produce'
+	- Remember, we are executing SQL queries in our projects so be sure to include the proper SQL Dialect dependency 
+	   (i.e - if its a Maven project add the proper dependency in the pom file, Gradle? add the proper dependency to the build.gradile file)
+	   Example: A someone building a Maven project that is using the Postgres dialect will add the following code snippet to their pom.xml file:
+	   Remember, a <dependency></dependency> must be inside the tag that holds all <dependencies></dependencies> *wink wink*
+	  
+	   ```
+	  <dependency>
+           	 <groupId>org.postgresql</groupId>
+         	     <artifactId>postgresql</artifactId>
+           	 <version>42.5.0</version>
+       	 </dependency>
+	   
+	   ```
+	 
+	- Now, in our 'java' folder , right click to Create a new Java class. Call it 'Produce'
 
 	- Then create a new interface in the 'java' folder, Call it "ProduceDAO"
 
@@ -112,7 +126,6 @@ How exciting !! So lets do just that !
 
 	- Finally create a Main/Driver class and in that main class add your main method
 
-			** // will add images with example project files
 
 
 

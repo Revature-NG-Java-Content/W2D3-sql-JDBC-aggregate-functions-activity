@@ -174,7 +174,7 @@ Notes from the above code snippet :
 		
 	- return = Note rs.getInt() indicates we are expecting an int back from the db. Inside of the parenthesis we add the column name or number where our answer will be. Since our aggregate functions return a single result, the column name insode those parenthesis should match the
 		aggregate function you are executing - as we see above.  The second return is there if we dont get a result becak , but we didnt have ann 
-		error either. Returning 0 just satifies the function's signature. \n
+		error either. Returning 0 just satifies the function's signature.
 
 
 

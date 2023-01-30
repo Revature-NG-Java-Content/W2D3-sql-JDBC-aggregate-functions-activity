@@ -7,7 +7,7 @@
 - 2 hours
 
 ### Description
-It is important that associates practice SQL querying using Java. As we work our way towards being abstracted away from witing SQL queries when building our projects, it is important to understand how exactly our Java projects are able to communicate with our database . 
+It is important that associates practice SQL querying using Java. As we work our way towards being abstracted away from writing SQL queries when building our projects, it is important to understand how exactly our Java projects are able to communicate with our database . 
 
 ### Main Goals
 - Practice writing SQL queries with aggregate functions in JDBC

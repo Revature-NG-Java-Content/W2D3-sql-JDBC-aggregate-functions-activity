@@ -1,7 +1,7 @@
 # Aggregate Functions Practice
 
 ## Important Resources
-- (JDBC-AggregateFunctions Lab)https://github.com/Revature-NG-Java-Content/W2D3-sql-JDBC-aggregate-functions-activity/blob/main/AggregateFunctionsJDBCLab.md
+- [JDBC-AggregateFunctions Lab](https://github.com/Revature-NG-Java-Content/W2D3-sql-JDBC-aggregate-functions-activity/blob/main/AggregateFunctionsJDBCLab.md)
 
 ## Time
 - 2 hours

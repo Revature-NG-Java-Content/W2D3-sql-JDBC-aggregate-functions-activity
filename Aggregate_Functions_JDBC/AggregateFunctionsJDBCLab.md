@@ -1,6 +1,3 @@
-
-## W2D3 - Group activity: perform an aggregation in a JDBC query. 
-
 # What are Aggregate Funtions ?
 
 ### An aggregate function computes a single result from multiple input rows. For example, we will start with basic aggregates to compute the:

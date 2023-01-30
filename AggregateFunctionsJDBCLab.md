@@ -13,7 +13,7 @@
 #### MIN - Returns the lowest value (minimum) in a set of non-NULL values
 #### MAX - Returns the highest value (maximum) in a set of non-NULL values
 
-#####
+##### \n 
 
 ## COUNT() 
 

@@ -7,7 +7,7 @@
 - 2 hours
 
 ### Description
-It is important that associates practice SQL querying. Creating DAOs will not give them the exposure needed to write the queries expected in interview questions. The Chinook database is an example database ready for querying. Associates will solve the query challenges provided. Once they finsh with those challenges they should create 5 sql Questions of their own. Encourage associates to come up with queries that expand their knowledge. Use things like pattern matching, order by descending or lesser used set operators.
+It is important that associates practice SQL querying using Java. As we work our way towards being abstracted away from witing SQL queries when building our projects, it is important to understand how exactly our Java projects are able to communicate with our database . 
 
 ### Main Goals
 - Practice writing SQL queries with aggregate functions in JDBC

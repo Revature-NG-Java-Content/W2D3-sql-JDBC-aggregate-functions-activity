@@ -1,7 +1,7 @@
 
 ## W2D3 - Group activity: perform an aggregation in a JDBC query. 
 
-# What are Aggregate Funtions ?
+# What are Aggregate Functions ?
 
 ### An aggregate function computes a single result from multiple input rows. For example, we will start with basic aggregates to compute the:
 
@@ -30,7 +30,7 @@ COUNT( [ALL|DISTINCT] expression )
 
 
 
-For this example, lets keep it simple. Copy the following lines into Dbeaver to create a table in your DB:
+For this example, lets keep it simple. Copy the following lines into DBeaver to create a table in your DB:
 
 ```
 create table if not EXISTS produce ( 
@@ -43,7 +43,7 @@ quantity int NOT null
 
 ```
 
-Once you have created the table copy, paste and run the following lines into dbeaver to populate the 'produce' table you created. 
+Once you have created the table copy, paste and run the following lines into DBeaver to populate the 'produce' table you created. 
 
 ```
 insert into produce (pname, price, ptype, quantity) values ('navel orange', 1.99, 'citrus',5),
@@ -73,9 +73,9 @@ insert into produce (pname, price, ptype, quantity) values ('navel orange', 1.99
 
 Awesome ! For this first example we are going to complete our our first aggregate function in our SQL script. 
 
-Task 1: Use the COUNT(*) function to get the number of differnt produce in the table
+Task 1: Use the COUNT(*) function to get the number of different produce in the table
 
-Copy and paste the following line into dbeaver and run it :
+Copy and paste the following line into DBeaver and run it :
 
 ```
 SELECT COUNT(*) as total_count
@@ -93,7 +93,7 @@ Note: "total_count" is the alias for our aggregate's column name. We will see th
 
 
 Awesome! Pretty straight forward right ? Great!  Now let's take it up a notch !
-If you scroll to the top of this lesson you'll see that the goal of this excersise if to perform aggregate functions in a JDBC (Java Database Connectivity) Query! 
+If you scroll to the top of this lesson you'll see that the goal of this exercise if to perform aggregate functions in a JDBC (Java Database Connectivity) Query! 
 How exciting !! So lets do just that ! 
 
 
@@ -105,7 +105,7 @@ How exciting !! So lets do just that !
 
 
 	- Remember, we are executing SQL queries in our projects so be sure to include the proper SQL Dialect dependency 
-	   (i.e - if its a Maven project add the proper dependency in the pom file, Gradle? add the proper dependency to the build.gradile file)
+	   (i.e - if its a Maven project add the proper dependency in the pom file, Gradle? add the proper dependency to the build.gradle file)
 	   Example: A someone building a Maven project that is using the Postgres dialect will add the following code snippet to their pom.xml file:
 	   Remember, a <dependency></dependency> must be inside the tag that holds all <dependencies></dependencies> *wink wink*
 	  
@@ -163,13 +163,13 @@ Please keep in mind that we created the ProduceDAO interface that our Produce Re
 @Override
     public int getCount() {
 
-        String sql = "SELECT COUNT(*) FROM produce";
+        String sql = "SELECT COUNT(*) AS total_count FROM produce";
 
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery();
             rs.next();
-            return rs.getInt("count");
+            return rs.getInt("total_count");
 
 
         } catch (SQLException sqlException) {
@@ -185,9 +185,8 @@ Notes from the above code snippet :
 	
 	- rs.next() = remember, in order for us to see what is in the result set we get back from the database, must use rs.next() which allows to go from pointing to the result set to being inside the result set.
 		
-	- return = Note rs.getInt() indicates we are expecting an int back from the db. Inside of the parenthesis we add the column name or number where our answer will be. Since our aggregate functions return a single result, the column name insode those parenthesis should match the
-		aggregate function you are executing - as we see above.  The second return is there if we dont get a result becak , but we didnt have ann 
-		error either. Returning 0 just satifies the function's signature.
+	- return = Note rs.getInt() indicates we are expecting an int back from the db. Inside of the parenthesis we add the column name or number where our answer will be. Since we used an alias (total_count) we are certain what that column's name will be.  
+        The second return is there if we don't get a result back , but we didn't have any error either. Returning 0 just satisfies the function's signature.
 
 
 
@@ -224,10 +223,10 @@ SUM( [ALL|DISTINCT] expression )
 
 ####
 
-Heyyy! You're killing it ! Let's switch it up a bit and use our SUM() function! For this example I am only going to walk you through finding the solution in dbeaver and leave it to you to do it in Java like we did with our COUNT() function!
+Hey! You're killing it ! Let's switch it up a bit and use our SUM() function! For this example I am only going to walk you through finding the solution in DBeaver and leave it to you to do it in Java like we did with our COUNT() function!
 
 
-In dbeaver, copy and paste the followling lines and run it:
+In DBeaver, copy and paste the following lines and run it:
 
 ```
 SELECT SUM(quantity) 
@@ -235,9 +234,9 @@ FROM produce
 WHERE ptype = 'berry';
 ```
 
-Let's break this down real quick! Notice we used SUM(quantity) instead of adding the asterisk symbol like we did with COUNT(), this is because if we recall from the definitions above SUM returns the total sum of a numeric column which means that we have to specify which numeric column we want to add up and then return that value; In this case we are returning the sum of the quantity column.  Also, to make it interesting we are only adding the quanties of the produce WHERE ptype or produce type = "berry". 
+Let's break this down real quick! Notice we used SUM(quantity) instead of adding the asterisk symbol like we did with COUNT(), this is because if we recall from the definitions above SUM returns the total sum of a numeric column which means that we have to specify which numeric column we want to add up and then return that value; In this case we are returning the sum of the quantity column.  Also, to make it interesting we are only adding the quantities of the produce WHERE ptype or produce type = "berry". 
 
-Well did you run it ? What sum did you get in dbeaver ? It should be 22 if you're following along with me exactly ! 
+Well did you run it ? What sum did you get in DBeaver ? It should be 22 if you're following along with me exactly ! 
 
 Awesome !! If you want to check the quantity of all produce in the table, how would you do that ??
 
@@ -285,7 +284,7 @@ Below you'll find an incomplete code snippet, complete the code to get the sum o
 
 After you complete the code, make your way to your Main method and test it out !
 
-What did you get ??? If youre following me exactly, the answer should be 19! 
+What did you get ??? If you are following me exactly, the answer should be 19! 
 
  	
 Awesome to continue self practice complete the following:
@@ -297,7 +296,7 @@ Awesome to continue self practice complete the following:
 	- Find the Minimum quantity from produce
 	
 	
-Hint: Try doing it as we did earlier. Find the answer in dbeaver, then translate it to Java. 
+Hint: Try doing it as we did earlier. Find the answer in DBeaver, then translate it to Java. 
 
 Good Luck and GREAT JOB! 
 

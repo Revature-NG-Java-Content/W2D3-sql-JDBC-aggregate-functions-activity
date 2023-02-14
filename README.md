@@ -1,4 +1,4 @@
-# 0003-CF-JSQL : Aggregate Functions Practice
+# 0003-CF-JSQL : Aggregate Functions
 
 #### Contributors: 
 
@@ -21,8 +21,6 @@ It is important that associates practice SQL querying using Java. As we work our
 3. After 2 hours see if anyone has completed the lab. 
  Note: It's up to you to decide if associates will push their projects to github as part of their requirements.
 4. Encourage associates that aren't finished after 2hrs to pair with associates that have completed the activity
-
-
 
 ### How to Complete this Activity
 - [JDBC-AggregateFunctions Lab](AggregateFunctionsJDBCLab.md)

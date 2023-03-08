@@ -108,7 +108,7 @@ How exciting !! So lets do just that !
 	   (i.e - if its a Maven project add the proper dependency in the pom file, Gradle? add the proper dependency to the build.gradle file)
 	   Example: A someone building a Maven project that is using the Postgres dialect will add the following code snippet to their pom.xml file:
 	   
-	 Keep in mind that a dependency must be inside the tag that holds all dependencies *wink wink*
+	 Keep in mind that a dependency must be inside the tag that holds all dependencies *'wink wink'*
 	  
 	   ```
 	  <dependency>

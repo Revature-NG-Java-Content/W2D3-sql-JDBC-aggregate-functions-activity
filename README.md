@@ -6,7 +6,7 @@ Tiffany Obi (Author)
 Tim Gattie(Review)
 
 #### Time
-- 2 hours
+- 1.5 hours
 
 ### Scope
 It is important that associates practice SQL querying using Java. As we work our way towards being abstracted away from writing SQL queries when building our projects, it is important to understand how exactly our Java projects are able to communicate with our database . 

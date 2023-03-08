@@ -107,7 +107,7 @@ How exciting !! So lets do just that !
 	- Remember, we are executing SQL queries in our projects so be sure to include the proper SQL Dialect dependency 
 	   (i.e - if its a Maven project add the proper dependency in the pom file, Gradle? add the proper dependency to the build.gradle file)
 	   Example: A someone building a Maven project that is using the Postgres dialect will add the following code snippet to their pom.xml file:
-	   Remember, a <dependency></dependency> must be inside the tag that holds all <dependencies></dependencies> *wink wink*
+	   Remember, a '<dependency></dependency>' must be inside the tag that holds all '<dependencies></dependencies>' *wink wink*
 	  
 	   ```
 	  <dependency>
@@ -287,7 +287,7 @@ After you complete the code, make your way to your Main method and test it out !
 What did you get ??? If you are following me exactly, the answer should be 19! 
 
  	
-Awesome to continue self practice complete the following:
+Awesome! Now, to continue self practice please complete the following:
 
 	- Find the Average quantity of produce in the table. Meaning, on average how many of each produce is there?
 	
